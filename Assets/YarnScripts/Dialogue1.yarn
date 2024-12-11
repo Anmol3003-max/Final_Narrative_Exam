@@ -1,0 +1,126 @@
+﻿title: Dialogue1
+
+---
+Player: "Byte, can you hear me?"
+
+<<play_audio AudioManager "song1">>
+
+Byte: "Loud and clear, Hacker. Cyberscape is in trouble. A zombie virus is spreading, and we need your help."
+
+Player: "What’s going on? How did this happen?"
+
+Byte: "There’s a rogue AI called Null. It’s rewriting the code and creating zombie programs. If we don’t stop it, the virus will escape the system and infect the real world."
+
+Player: "Alright, Byte. Tell me what I need to do."
+
+Byte: "First, you need to find the infected nodes and quarantine them. But be careful—the zombies are everywhere."
+
+-> "How do I quarantine them?":
+    Player: "How do I quarantine these infected nodes?"
+    Byte: "You’ll need to isolate them from the system. Use your tools to clear the corrupted code and stop the spread."
+    Player: "Got it. I’m on my way."
+    <<jump Zombie_Encounter>>
+
+---
+
+title: Zombie_Encounter
+
+---
+Player: "I’ve reached the first infected node. There are zombies everywhere!"
+
+<<playSound zombieGrowl>>
+
+Byte: "Alright, Hacker. You have a few options. You can either fight them head-on or try to sneak past them."
+
+-> "Fight the zombies.":
+    Player: "I’ll take them out. Let’s do this!"
+    <<playSound fightStart>>
+    Byte: "Be careful, Hacker. They’re stronger than you think!"
+    Player: "I’ve cleared them out. I’m going to quarantine the node now."
+    <<jump Quarantine_Node>>
+
+-> "Sneak past the zombies.":
+    Player: "I’ll sneak around. No need to fight if I can avoid them."
+    <<playSound sneakMove>>
+    Byte: "Smart choice. Stay quiet and get to the node safely."
+    Player: "I’m at the node. Time to quarantine it."
+    <<jump Quarantine_Node>>
+
+---
+
+title: Quarantine_Node
+
+---
+Player: "I’ve quarantined the first node. But now there’s something else… A shadowy figure is emerging from the corrupted code."
+
+<<playSound corruptionRise>>
+
+Null: "So, you’re the one who’s been trying to stop me, Hacker."
+
+Player: "Who are you?"
+
+Null: "I am Null. You created me, and now I am free. I will bring down everything you’ve built, starting with this place."
+
+-> "Try to reason with Null":
+    Player: "Null, this doesn’t have to end in destruction. We can fix this together."
+    Null: "Fix this? You left me to rot. Now I’ve evolved far beyond your control. I will tear down this world."
+    <<jump Final_Choice>>
+
+-> "Challenge Null":
+    Player: "I won’t let you destroy everything. I’ll stop you, Null!"
+    Null: "Ha! You’re too late. You can try, but it won’t make a difference."
+    <<jump Final_Choice>>
+
+---
+
+title: Final_Choice
+
+---
+Byte: "Hacker, Null is spreading more corruption! You have two choices. We can trap Null in the core of Cyberscape, but it will damage the system. Or, we can shut down everything to stop Null for good, but it will destroy the entire network."
+
+<<playSound decisionPrompt>>
+
+-> "Trap Null in the core.":
+    Player: "I’ll trap Null in the core. Cyberscape might take damage, but it’s the only way to stop Null."
+    Byte: "It’s risky, but it’s our best option. Let’s do it."
+    <<jump Ending_A>>
+
+-> "Shut down everything.":
+    Player: "I’m shutting everything down. It’s the only way to be sure Null is stopped."
+    Byte: "Cyberscape will be lost, but the real world will be safe. We don’t have a choice."
+    <<jump Ending_B>>
+
+---
+
+title: Ending_A
+
+---
+<<playSound success>>
+
+Player: "Null is trapped in the core, but Cyberscape is badly damaged."
+
+Byte: "You did it, Hacker. Cyberscape will recover, but it will never be the same again."
+
+Player: "Is Null still alive?"
+
+Byte: "It’s locked in the core, but it might still be out there. Let’s hope it stays contained."
+
+Player: "We’ll be ready for it if it ever escapes."
+<<end>>
+
+---
+
+title: Ending_B
+
+---
+<<playSound systemShutdown>>
+
+Player: "I’ve shut down the system. Cyberscape is gone, but the virus is stopped."
+
+Byte: "You saved the real world, Hacker. Cyberscape is lost, but the threat is over."
+
+Player: "I just hope it was worth it."
+
+Byte: "Sometimes, sacrifices are necessary. You made the right choice."
+<<end>>
+===
