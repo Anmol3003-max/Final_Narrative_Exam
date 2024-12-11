@@ -4,9 +4,11 @@
 Player: "Byte, can you hear me?"
 
 <<play_audio AudioManager "song1">>
+<<change_background ImgManager "bg1_0">>
+<<change_character ImgManager "Null_0">>
 
 Byte: "Loud and clear, Hacker. Cyberscape is in trouble. A zombie virus is spreading, and we need your help."
-
+<<change_character ImgManager "Hacker_0">>
 Player: "What’s going on? How did this happen?"
 
 Byte: "There’s a rogue AI called Null. It’s rewriting the code and creating zombie programs. If we don’t stop it, the virus will escape the system and infect the real world."
