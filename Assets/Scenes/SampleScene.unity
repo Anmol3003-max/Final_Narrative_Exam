@@ -550,7 +550,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -645,8 +645,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 8158ce3af68861d4f8fcc92c868b1437, type: 3}
-  - {fileID: 8300000, guid: 63fcc6824bbe41f45a0da637f1265380, type: 3}
+  - {fileID: 8300000, guid: 98b6989f9218c764f9790d5df6e6e269, type: 3}
+  - {fileID: 8300000, guid: 710abacfa44881b4696b47561b19fbaa, type: 3}
+  - {fileID: 8300000, guid: db8ab3b5a51909842a6de6ed0e41c617, type: 3}
+  - {fileID: 8300000, guid: 20aaf69a132cf7640bb1ececa623c4b3, type: 3}
+  - {fileID: 8300000, guid: 7320285fbc04791448767ff788cb9d92, type: 3}
+  - {fileID: 8300000, guid: e95c2d2cd3f787b41ae804355da9ba37, type: 3}
+  - {fileID: 8300000, guid: 392000e79e2614c40b715311df628830, type: 3}
+  - {fileID: 8300000, guid: 8f1684bff06afdf4b8cff9f57ebb2efc, type: 3}
+  - {fileID: 8300000, guid: c45dc0b3548436940a56fa2797a5d8b8, type: 3}
+  - {fileID: 8300000, guid: b378974700460af4b800f73015004390, type: 3}
+  - {fileID: 8300000, guid: db73bdd3e88471d43985f6ef56be0692, type: 3}
+  - {fileID: 8300000, guid: a1377800306b0fb4589d85ae29a244f3, type: 3}
+  - {fileID: 8300000, guid: 202c319c5e48ac74c8b7af529afc8a85, type: 3}
+  - {fileID: 8300000, guid: 0c6c2526b89c6ae41991de41d9ed4a27, type: 3}
+  - {fileID: 8300000, guid: aea4b85341e882947b86c2a38fd39c4e, type: 3}
+  - {fileID: 8300000, guid: 0c6c2526b89c6ae41991de41d9ed4a27, type: 3}
+  - {fileID: 8300000, guid: 7bfd9609cd556844c83aa37261a2bfb6, type: 3}
+  - {fileID: 8300000, guid: ac8f758d897dc6141830b82c90942a72, type: 3}
+  - {fileID: 8300000, guid: 399b6cd7cf4a3e145a138fba4fa76f83, type: 3}
+  - {fileID: 8300000, guid: 73fc6ca9732440944b61a5b33e7e1c3f, type: 3}
+  - {fileID: 8300000, guid: b069e293a8a84974c93a4e6bed41b358, type: 3}
+  - {fileID: 8300000, guid: 651e681259c3635449b7e121ed691daf, type: 3}
+  - {fileID: 8300000, guid: 8497dfcb2dd1d04489783e8fd261cdfd, type: 3}
+  - {fileID: 8300000, guid: eb1163f1659e32946af7640ed520e174, type: 3}
+  - {fileID: 8300000, guid: 81f36ecd6b6363c4b958beb6db9ad2e4, type: 3}
+  - {fileID: 8300000, guid: b5e6a284e95ace54186abcdc207ecfd0, type: 3}
+  - {fileID: 8300000, guid: 117458760fa128e43b69528b5a996f49, type: 3}
+  - {fileID: 8300000, guid: 6e15f981b1c458f4a9030503d678edb0, type: 3}
+  - {fileID: 8300000, guid: 107604a961ac4d146947050afae2dc12, type: 3}
+  - {fileID: 8300000, guid: 85121a8dff9eae84abe3ef79ea59f5d4, type: 3}
+  - {fileID: 8300000, guid: 1794ae85fb47fc846838a233034afbbb, type: 3}
+  - {fileID: 8300000, guid: 9045c3e6ff67eeb40aa61d3a261a373d, type: 3}
+  - {fileID: 8300000, guid: b99313b5a37f5974e8553c3865bb2203, type: 3}
+  - {fileID: 8300000, guid: ad3f2974e431111479e113484e79400b, type: 3}
+  - {fileID: 8300000, guid: 528c9b9ae5b53b14aa71fff7645c682f, type: 3}
+  - {fileID: 8300000, guid: 0ca46dac4720e0a4f919bd60d95fad61, type: 3}
+  - {fileID: 8300000, guid: 4847bdf76fb9a294b96d510b1afe649e, type: 3}
+  - {fileID: 8300000, guid: cc41a8d0e1858fc4cbda36f5a5cacb4f, type: 3}
+  - {fileID: 8300000, guid: 419eee11f69498545b62f07356b7d55f, type: 3}
+  - {fileID: 8300000, guid: 832aab3bbadffbe438f8a0aee2addc51, type: 3}
 --- !u!1 &740716488
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,8 +719,9 @@ MonoBehaviour:
   backgroundSprites:
   - {fileID: -1768854372134492381, guid: 34056972cd640e641a69d167d28c49c6, type: 3}
   characterSprites:
-  - {fileID: 876576419081252185, guid: 35bcf5fe585a985409c7b523ffbf8e88, type: 3}
-  - {fileID: 7627683275842373084, guid: 7a83cdd38ac89ef4cb8618189a00206d, type: 3}
+  - {fileID: 876576419081252185, guid: efe8c2df7c04a4041a3caf55b245a96e, type: 3}
+  - {fileID: 6179827421575245913, guid: bf7e896825f47d745a0f3e8ba2c54dba, type: 3}
+  - {fileID: -5782521184205631276, guid: 149f05f0b8ce9bc49a5c9d17bc305e20, type: 3}
 --- !u!4 &740716490
 Transform:
   m_ObjectHideFlags: 0
@@ -695,7 +734,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 846144583}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &846144581
@@ -778,12 +818,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846144581}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0797, y: 0.0319, z: 0}
   m_LocalScale: {x: 0.9567494, y: 0.93789375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 740716490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156148426
 GameObject:
@@ -845,7 +885,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -883,7 +923,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 123525243}
-  - {fileID: 846144583}
   - {fileID: 740716490}
   - {fileID: 1156148428}
   - {fileID: 343837455}

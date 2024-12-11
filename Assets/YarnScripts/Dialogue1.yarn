@@ -1,128 +1,180 @@
 ﻿title: Dialogue1
 
+position: 35,-177
 ---
+Hello:Welcome
+<<change_character ImgManager "Hacker_0">>
+<<change_background ImgManager "bg1_0">>
+<<play_audio AudioManager "Player1">>
 Player: "Byte, can you hear me?"
 
-<<play_audio AudioManager "song1">>
-<<change_background ImgManager "bg1_0">>
-<<change_character ImgManager "Null_0">>
 
+
+<<play_audio AudioManager "Byte1">>
+<<change_character ImgManager "Byte_0">>
 Byte: "Loud and clear, Hacker. Cyberscape is in trouble. A zombie virus is spreading, and we need your help."
+
+<<play_audio AudioManager "Player2">>
 <<change_character ImgManager "Hacker_0">>
 Player: "What’s going on? How did this happen?"
-
+<<play_audio AudioManager "Byte 2">>
+<<change_character ImgManager "Byte_0">>
 Byte: "There’s a rogue AI called Null. It’s rewriting the code and creating zombie programs. If we don’t stop it, the virus will escape the system and infect the real world."
-
+<<play_audio AudioManager "Player3">>
+<<change_character ImgManager "Hacker_0">>
 Player: "Alright, Byte. Tell me what I need to do."
-
+<<play_audio AudioManager "Byte3">>
+<<change_character ImgManager "Byte_0">>
 Byte: "First, you need to find the infected nodes and quarantine them. But be careful—the zombies are everywhere."
-
--> "How do I quarantine them?":
+->"How do I quarantine them?"
+    <<play_audio AudioManager "Player 4">>
+    <<change_character ImgManager "Hacker_0">>
     Player: "How do I quarantine these infected nodes?"
+    <<play_audio AudioManager "Byte4">>
+    <<change_character ImgManager "Byte_0">>
     Byte: "You’ll need to isolate them from the system. Use your tools to clear the corrupted code and stop the spread."
+    <<play_audio AudioManager "Player 5">>
+    <<change_character ImgManager "Hacker_0">>
     Player: "Got it. I’m on my way."
     <<jump Zombie_Encounter>>
-
----
+->Where are the zombies?
+    <<jump Zombie_Encounter>>
+===
 
 title: Zombie_Encounter
 
+position: 33,52
 ---
+<<play_audio AudioManager "Player6">>
+<<change_character ImgManager "Hacker_0">>
 Player: "I’ve reached the first infected node. There are zombies everywhere!"
 
-<<playSound zombieGrowl>>
 
+<<play_audio AudioManager "Byte5">>
+<<change_character ImgManager "Byte_0">>
 Byte: "Alright, Hacker. You have a few options. You can either fight them head-on or try to sneak past them."
-
--> "Fight the zombies.":
+<<change_character ImgManager "zombie_0">>
+-> "Fight the zombies."
+    <<play_audio AudioManager "Player7">>
+    <<change_character ImgManager "Hacker_0">>
     Player: "I’ll take them out. Let’s do this!"
-    <<playSound fightStart>>
+    <<play_audio AudioManager "Byte 6">>
+    <<change_character ImgManager "Byte_0">>
     Byte: "Be careful, Hacker. They’re stronger than you think!"
+    <<play_audio AudioManager "Player8">>
+    <<change_character ImgManager "Hacker_0">>
     Player: "I’ve cleared them out. I’m going to quarantine the node now."
     <<jump Quarantine_Node>>
-
--> "Sneak past the zombies.":
+-> "Sneak past the zombies."
+    <<play_audio AudioManager "Player9">>
+    <<change_character ImgManager "Hacker_0">>
     Player: "I’ll sneak around. No need to fight if I can avoid them."
-    <<playSound sneakMove>>
+    <<play_audio AudioManager "Byte7">>
+    <<change_character ImgManager "Byte_0">>
     Byte: "Smart choice. Stay quiet and get to the node safely."
+    <<play_audio AudioManager "Player 10">>
+    <<change_character ImgManager "Hacker_0">>
     Player: "I’m at the node. Time to quarantine it."
     <<jump Quarantine_Node>>
 
----
+===
 
 title: Quarantine_Node
 
 ---
+<<play_audio AudioManager "Player11">>
+<<change_character ImgManager "Hacker_0">>
 Player: "I’ve quarantined the first node. But now there’s something else… A shadowy figure is emerging from the corrupted code."
-
-<<playSound corruptionRise>>
-
+ <<play_audio AudioManager "Null1">>
 Null: "So, you’re the one who’s been trying to stop me, Hacker."
-
+<<play_audio AudioManager "Player12">>
+<<change_character ImgManager "Hacker_0">>
 Player: "Who are you?"
-
+<<play_audio AudioManager "Null2">>
 Null: "I am Null. You created me, and now I am free. I will bring down everything you’ve built, starting with this place."
 
--> "Try to reason with Null":
+-> "Try to reason with Null"
+    <<play_audio AudioManager "Player 13">>
+    <<change_character ImgManager "Hacker_0">>
     Player: "Null, this doesn’t have to end in destruction. We can fix this together."
+    <<play_audio AudioManager "Null3">>
     Null: "Fix this? You left me to rot. Now I’ve evolved far beyond your control. I will tear down this world."
     <<jump Final_Choice>>
-
--> "Challenge Null":
+-> "Challenge Null"
+    <<play_audio AudioManager "Player14">>
+    <<change_character ImgManager "Hacker_0">>
     Player: "I won’t let you destroy everything. I’ll stop you, Null!"
+    <<play_audio AudioManager "Null4">>
     Null: "Ha! You’re too late. You can try, but it won’t make a difference."
     <<jump Final_Choice>>
 
----
+===
 
 title: Final_Choice
 
 ---
+ <<play_audio AudioManager "Byte8">>
+ <<change_character ImgManager "Byte_0">>
 Byte: "Hacker, Null is spreading more corruption! You have two choices. We can trap Null in the core of Cyberscape, but it will damage the system. Or, we can shut down everything to stop Null for good, but it will destroy the entire network."
 
-<<playSound decisionPrompt>>
-
--> "Trap Null in the core.":
+-> "Trap Null in the core."
+    <<play_audio AudioManager "Player15">>
+    <<change_character ImgManager "Hacker_0">>
+    <<jump Ending_A>>
     Player: "I’ll trap Null in the core. Cyberscape might take damage, but it’s the only way to stop Null."
+     <<play_audio AudioManager "Byte9">>
+     <<change_character ImgManager "Byte_0">>
     Byte: "It’s risky, but it’s our best option. Let’s do it."
     <<jump Ending_A>>
-
--> "Shut down everything.":
+-> "Shut down everything."
+    <<play_audio AudioManager "Player 16">>
+    <<change_character ImgManager "Hacker_0">>
     Player: "I’m shutting everything down. It’s the only way to be sure Null is stopped."
+    <<play_audio AudioManager "Byte10">>
+    <<change_character ImgManager "Byte_0">>
     Byte: "Cyberscape will be lost, but the real world will be safe. We don’t have a choice."
-    <<jump Ending_B>>
+<<jump Ending_B>>
 
----
+===
 
 title: Ending_A
 
 ---
-<<playSound success>>
 
+<<play_audio AudioManager "Player17">>
+<<change_character ImgManager "Hacker_0">>
 Player: "Null is trapped in the core, but Cyberscape is badly damaged."
-
+ <<play_audio AudioManager "Byte11">>
+ <<change_character ImgManager "Byte_0">>
 Byte: "You did it, Hacker. Cyberscape will recover, but it will never be the same again."
-
+<<play_audio AudioManager "Player 18">>
+<<change_character ImgManager "Hacker_0">>
 Player: "Is Null still alive?"
-
+ <<play_audio AudioManager "Byte12">>
+ <<change_character ImgManager "Byte_0">>
 Byte: "It’s locked in the core, but it might still be out there. Let’s hope it stays contained."
-
+<<play_audio AudioManager "Player19">>
+<<change_character ImgManager "Hacker_0">>
 Player: "We’ll be ready for it if it ever escapes."
 <<end>>
 
----
+===
 
 title: Ending_B
 
 ---
-<<playSound systemShutdown>>
 
+<<play_audio AudioManager "Player20">>
+<<change_character ImgManager "Hacker_0">>
 Player: "I’ve shut down the system. Cyberscape is gone, but the virus is stopped."
-
+ <<play_audio AudioManager "Byte13">>
+ <<change_character ImgManager "Byte_0">>
 Byte: "You saved the real world, Hacker. Cyberscape is lost, but the threat is over."
-
+<<play_audio AudioManager "Player21">>
+<<change_character ImgManager "Hacker_0">>
 Player: "I just hope it was worth it."
-
+ <<play_audio AudioManager "Byte14">>
+ <<change_character ImgManager "Byte_0">>
 Byte: "Sometimes, sacrifices are necessary. You made the right choice."
 <<end>>
 ===
